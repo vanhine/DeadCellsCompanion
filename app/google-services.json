@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "213444305941",
+    "firebase_url": "https://dead-cells-268800.firebaseio.com",
+    "project_id": "dead-cells-268800",
+    "storage_bucket": "dead-cells-268800.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213444305941:android:01cb71b20abf8d35915a1c",
+        "android_client_info": {
+          "package_name": "com.mrwinston.deadcellscompanion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213444305941-m0q4b2acpkv77n8jc64mqqj3gvak3rhh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO-PKTOV8PUG2HRywRKdi3F3kSCiNjMr8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213444305941-m0q4b2acpkv77n8jc64mqqj3gvak3rhh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

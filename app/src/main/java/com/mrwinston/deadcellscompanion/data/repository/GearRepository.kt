@@ -1,11 +1,11 @@
-package com.mrwinston.deadcellscompanion.repository
+package com.mrwinston.deadcellscompanion.data.repository
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.mrwinston.deadcellscompanion.models.*
+import com.mrwinston.deadcellscompanion.data.model.*
 
 class GearRepository {
     private val db = Firebase.firestore

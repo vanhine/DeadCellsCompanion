@@ -1,4 +1,4 @@
-package com.mrwinston.deadcellscompanion.fragments
+package com.mrwinston.deadcellscompanion.view.fragments
 
 import android.os.Bundle
 import android.view.View
@@ -7,8 +7,8 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mrwinston.deadcellscompanion.R
-import com.mrwinston.deadcellscompanion.adapters.GearItemAdapter
 import com.mrwinston.deadcellscompanion.util.GridItemOffsetDecoration
+import com.mrwinston.deadcellscompanion.util.adapters.GearItemAdapter
 import com.mrwinston.deadcellscompanion.viewmodel.GearViewModel
 import kotlinx.android.synthetic.main.ranged_weapons_fragment.*
 
@@ -29,7 +29,12 @@ class RangedWeaponsFragment : Fragment(R.layout.ranged_weapons_fragment) {
         recyclerView.adapter = gearItemAdapter
         gearItemAdapter.onItemClick = { gearItem ->
             val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
-            fragmentTransaction?.replace(R.id.main_view_frame, GearInfoFragment(gearItem))
+            fragmentTransaction?.replace(
+                R.id.main_view_frame,
+                GearInfoFragment(
+                    gearItem
+                )
+            )
             fragmentTransaction?.addToBackStack(null)
             fragmentTransaction?.commit()
         }

@@ -1,6 +1,5 @@
-package com.mrwinston.deadcellscompanion.fragments
+package com.mrwinston.deadcellscompanion.view.fragments
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -8,7 +7,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.mrwinston.deadcellscompanion.R
-import com.mrwinston.deadcellscompanion.models.*
+import com.mrwinston.deadcellscompanion.data.model.*
 import kotlinx.android.synthetic.main.gear_info_fragment.view.*
 
 class GearInfoFragment(val gearItem: GearItem) : Fragment(R.layout.gear_info_fragment) {
@@ -29,9 +28,9 @@ class GearInfoFragment(val gearItem: GearItem) : Fragment(R.layout.gear_info_fra
         when(gearItem) {
             is MeleeWeapon -> {
                 view.apply {
-                    extra_info_1_label.text = "Base DPS"
+                    extra_info_1_label.text = context.getString(R.string.base_dps)
                     extra_info_1.text = gearItem.baseDps
-                    extra_info_2_label.text = "Base Special DPS"
+                    extra_info_2_label.text = context.getString(R.string.base_special_dps)
                     extra_info_2.text = gearItem.baseSpecialDps
                     extra_info_3_label.visibility = View.GONE
                     extra_info_3.visibility = View.GONE
@@ -39,9 +38,9 @@ class GearInfoFragment(val gearItem: GearItem) : Fragment(R.layout.gear_info_fra
             }
             is RangedWeapon -> {
                 view.apply {
-                    extra_info_1_label.text = "Base DPS"
+                    extra_info_1_label.text = context.getString(R.string.base_dps)
                     extra_info_1.text = gearItem.baseDps
-                    extra_info_2_label.text = "Base Special DPS"
+                    extra_info_2_label.text = context.getString(R.string.base_special_dps)
                     extra_info_2.text = gearItem.baseSpecialDps
                     extra_info_3_label.visibility = View.GONE
                     extra_info_3.visibility = View.GONE
@@ -49,29 +48,29 @@ class GearInfoFragment(val gearItem: GearItem) : Fragment(R.layout.gear_info_fra
             }
             is Shield -> {
                 view.apply {
-                    extra_info_1_label.text = "Block Damage"
+                    extra_info_1_label.text = context.getString(R.string.block_damage)
                     extra_info_1.text = gearItem.blockDamage
-                    extra_info_2_label.text = "Parry Damage"
+                    extra_info_2_label.text = context.getString(R.string.perry_damage)
                     extra_info_2.text = gearItem.parryDamage
-                    extra_info_3_label.text = "Absorb Damage"
+                    extra_info_3_label.text = context.getString(R.string.absorb_damage)
                     extra_info_3.text = gearItem.absorbDamage
                 }
             }
             is Grenade -> {
                 view.apply {
-                    extra_info_1_label.text = "Base Damage"
+                    extra_info_1_label.text = context.getString(R.string.base_damage)
                     extra_info_1.text = gearItem.baseDamage
-                    extra_info_2_label.text = "Base Cooldown Time"
+                    extra_info_2_label.text = context.getString(R.string.base_cooldown_time)
                     extra_info_2.text = gearItem.baseCooldownTime
-                    extra_info_3_label.text = "Damage Reduction"
+                    extra_info_3_label.text = context.getString(R.string.damage_reduction)
                     extra_info_3.text = gearItem.damageReduction
                 }
             }
             is TrapOrTurret -> {
                 view.apply {
-                    extra_info_1_label.text = "Base Damage"
+                    extra_info_1_label.text = context.getString(R.string.base_damage)
                     extra_info_1.text = gearItem.baseDamage
-                    extra_info_2_label.text = "Base Cooldown Time"
+                    extra_info_2_label.text = context.getString(R.string.base_cooldown_time)
                     extra_info_2.text = gearItem.baseCooldownTime
                     extra_info_3_label.visibility = View.GONE
                     extra_info_3.visibility = View.GONE
@@ -79,11 +78,11 @@ class GearInfoFragment(val gearItem: GearItem) : Fragment(R.layout.gear_info_fra
             }
             is Power -> {
                 view.apply {
-                    extra_info_1_label.text = "Base Damage"
+                    extra_info_1_label.text = context.getString(R.string.base_damage)
                     extra_info_1.text = gearItem.baseDamage
-                    extra_info_2_label.text = "Base Cooldown Time"
+                    extra_info_2_label.text = context.getString(R.string.base_cooldown_time)
                     extra_info_2.text = gearItem.baseCooldownTime
-                    extra_info_3_label.text = "Damage Reduction"
+                    extra_info_3_label.text = context.getString(R.string.damage_reduction)
                     extra_info_3.text = gearItem.damageReduction
                 }
             }

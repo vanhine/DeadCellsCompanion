@@ -1,10 +1,9 @@
 package com.mrwinston.deadcellscompanion.viewmodel
 
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.mrwinston.deadcellscompanion.models.*
-import com.mrwinston.deadcellscompanion.repository.GearRepository
+import com.mrwinston.deadcellscompanion.data.model.*
+import com.mrwinston.deadcellscompanion.data.repository.GearRepository
 
 class GearViewModel: ViewModel() {
     private val gearRepository: GearRepository = GearRepository()

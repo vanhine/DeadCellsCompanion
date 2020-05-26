@@ -1,4 +1,4 @@
-package com.mrwinston.deadcellscompanion.models
+package com.mrwinston.deadcellscompanion.data.model
 
 data class MeleeWeapon(
     override val name: String,

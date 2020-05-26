@@ -1,15 +1,14 @@
-package com.mrwinston.deadcellscompanion.fragments
+package com.mrwinston.deadcellscompanion.view.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mrwinston.deadcellscompanion.R
-import com.mrwinston.deadcellscompanion.adapters.GearItemAdapter
 import com.mrwinston.deadcellscompanion.util.GridItemOffsetDecoration
+import com.mrwinston.deadcellscompanion.util.adapters.GearItemAdapter
 import com.mrwinston.deadcellscompanion.viewmodel.GearViewModel
 import kotlinx.android.synthetic.main.shields_fragment.*
 
@@ -33,7 +32,12 @@ class ShieldsFragment : Fragment(R.layout.shields_fragment) {
         recyclerView.adapter = gearItemAdapter
         gearItemAdapter.onItemClick = { gearItem ->
             val fragmentTransaction = parentFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.main_view_frame, GearInfoFragment(gearItem))
+            fragmentTransaction.replace(
+                R.id.main_view_frame,
+                GearInfoFragment(
+                    gearItem
+                )
+            )
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()
         }

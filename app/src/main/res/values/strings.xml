@@ -3,4 +3,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="base_dps">Base DPS</string>
+    <string name="base_special_dps">Base Special DPS</string>
+    <string name="block_damage">Block Damage</string>
+    <string name="perry_damage">Parry Damage</string>
+    <string name="absorb_damage">Absorb Damage</string>
+    <string name="base_damage">Base Damage</string>
+    <string name="base_cooldown_time">Base Cooldown Time</string>
+    <string name="damage_reduction">Damage Reduction</string>
+    <string name="weapon_image">Weapon Image</string>
+    <string name="header">Header</string>
+    <string name="description">Description</string>
+    <string name="blueprint_location">Blueprint Location</string>
 </resources>

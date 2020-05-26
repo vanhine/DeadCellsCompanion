@@ -1,15 +1,13 @@
-package com.mrwinston.deadcellscompanion
+package com.mrwinston.deadcellscompanion.view
 
-import android.opengl.Visibility
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import com.mrwinston.deadcellscompanion.fragments.*
+import com.mrwinston.deadcellscompanion.R
+import com.mrwinston.deadcellscompanion.view.fragments.*
 
 class MainActivity : FragmentActivity() {
     private lateinit var auth: FirebaseAuth
@@ -24,13 +22,11 @@ class MainActivity : FragmentActivity() {
 
     override fun onStart() {
         super.onStart()
-        val currentUser = auth.currentUser
         loadFragment()
         auth.signInAnonymously()
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     Log.d(TAG, "signedInAnonymously:success")
-                    val user = auth.currentUser
                     loadFragment()
                 } else {
                     Log.d(TAG, "Failed to login anonymously", task.exception)
@@ -55,7 +51,8 @@ class MainActivity : FragmentActivity() {
             fragmentTransaction.commit()
             true
         }
-        bottomNavigationView.selectedItemId = R.id.bottom_nav_weapons
+        bottomNavigationView.selectedItemId =
+            R.id.bottom_nav_weapons
     }
 
     companion object {

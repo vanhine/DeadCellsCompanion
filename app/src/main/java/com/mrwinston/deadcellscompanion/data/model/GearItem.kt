@@ -1,4 +1,4 @@
-package com.mrwinston.deadcellscompanion.models
+package com.mrwinston.deadcellscompanion.data.model
 
 interface GearItem {
     val name: String

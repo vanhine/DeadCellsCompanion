@@ -18,7 +18,7 @@ data class Grenade(
             val baseDamage = document["base_damage"].toString()
             val baseCooldownTime = document["base_cooldown_time"].toString()
             val damageReduction = document["damage_reduction"].toString()
-            val scalingUrl = document["scaling_url"].toString()
+            val scalingUrl = document["scaling"].toString()
             val imageUrl = document["image_url"].toString()
             return Grenade(
                 name,

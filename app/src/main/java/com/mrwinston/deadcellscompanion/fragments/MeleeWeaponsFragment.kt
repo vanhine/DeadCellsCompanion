@@ -1,7 +1,9 @@
 package com.mrwinston.deadcellscompanion.fragments
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
@@ -17,6 +19,14 @@ class MeleeWeaponsFragment : Fragment(R.layout.melee_weapons_fragment) {
     private lateinit var recyclerView: RecyclerView
     private val gearItemAdapter = GearItemAdapter()
 
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return super.onCreateView(inflater, container, savedInstanceState)
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recyclerView = melee_weapon_recycler
         recyclerView.layoutManager = GridLayoutManager(context, 3)
@@ -27,6 +37,12 @@ class MeleeWeaponsFragment : Fragment(R.layout.melee_weapons_fragment) {
             )
         recyclerView.addItemDecoration(gridItemOffsetDecoration)
         recyclerView.adapter = gearItemAdapter
+        gearItemAdapter.onItemClick = { gearItem ->
+            val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
+            fragmentTransaction?.replace(R.id.main_view_frame, GearInfoFragment(gearItem))
+            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.commit()
+        }
         gearViewModel.meleeWeapons.observe(viewLifecycleOwner, Observer { meleeWeapons ->
             gearItemAdapter.gearList = meleeWeapons
             gearItemAdapter.notifyDataSetChanged()

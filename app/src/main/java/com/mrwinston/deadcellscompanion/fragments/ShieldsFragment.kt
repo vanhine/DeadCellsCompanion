@@ -1,6 +1,7 @@
 package com.mrwinston.deadcellscompanion.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -30,9 +31,18 @@ class ShieldsFragment : Fragment(R.layout.shields_fragment) {
             )
         recyclerView.addItemDecoration(gridItemOffsetDecoration)
         recyclerView.adapter = gearItemAdapter
+        gearItemAdapter.onItemClick = { gearItem ->
+            val fragmentTransaction = parentFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.main_view_frame, GearInfoFragment(gearItem))
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+        }
         gearViewModel.shields.observe(viewLifecycleOwner, Observer { shields ->
             gearItemAdapter.gearList = shields
             gearItemAdapter.notifyDataSetChanged()
         })
+    }
+    companion object {
+        private val TAG = "ShieldsFragment"
     }
 }

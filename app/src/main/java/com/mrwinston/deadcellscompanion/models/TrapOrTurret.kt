@@ -16,7 +16,7 @@ data class TrapOrTurret (
             val blueprintLocation = document["blueprint_location"].toString()
             val baseDamage = document["base_damage"].toString()
             val baseCooldownTime = document["base_cooldown_time"].toString()
-            val scalingUrl = document["scaling_url"].toString()
+            val scalingUrl = document["scaling"].toString()
             val imageUrl = document["image_url"].toString()
             return TrapOrTurret(
                 name,

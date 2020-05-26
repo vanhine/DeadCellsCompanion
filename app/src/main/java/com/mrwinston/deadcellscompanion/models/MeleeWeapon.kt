@@ -16,7 +16,7 @@ data class MeleeWeapon(
             val blueprintLocation = document["blueprint_location"].toString()
             val baseDps = document["base_dps"].toString()
             val baseSpecialDps = document["base_special_dps"].toString()
-            val scalingUrl = document["scaling_url"].toString()
+            val scalingUrl = document["scaling"].toString()
             val imageUrl = document["image_url"].toString()
             return MeleeWeapon(
                 name,

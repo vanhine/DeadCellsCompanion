@@ -27,6 +27,12 @@ class RangedWeaponsFragment : Fragment(R.layout.ranged_weapons_fragment) {
             )
         recyclerView.addItemDecoration(gridItemOffsetDecoration)
         recyclerView.adapter = gearItemAdapter
+        gearItemAdapter.onItemClick = { gearItem ->
+            val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
+            fragmentTransaction?.replace(R.id.main_view_frame, GearInfoFragment(gearItem))
+            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.commit()
+        }
         gearViewModel.rangedWeapons.observe(viewLifecycleOwner, Observer { rangedWeapons ->
             gearItemAdapter.gearList = rangedWeapons
             gearItemAdapter.notifyDataSetChanged()

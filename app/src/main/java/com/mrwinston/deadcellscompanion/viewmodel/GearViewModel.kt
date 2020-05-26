@@ -8,7 +8,9 @@ import com.mrwinston.deadcellscompanion.repository.GearRepository
 
 class GearViewModel: ViewModel() {
     private val gearRepository: GearRepository = GearRepository()
+
     val meleeWeapons: LiveData<List<MeleeWeapon>> = gearRepository.provideMeleeWeapons()
+
     val rangedWeapons: LiveData<List<RangedWeapon>> = gearRepository.provideRangedWeapons()
     val shields: LiveData<List<Shield>> = gearRepository.provideShields()
     val grenades: LiveData<List<Grenade>> = gearRepository.provideGrenades()

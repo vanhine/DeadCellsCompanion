@@ -18,7 +18,7 @@ data class Shield (
             val blockDamage = document["block_damage"].toString()
             val parryDamage = document["parry_damage"].toString()
             val absorbDamage = document["absorb_damage"].toString()
-            val scalingUrl = document["scaling_url"].toString()
+            val scalingUrl = document["scaling"].toString()
             val imageUrl = document["image_url"].toString()
             return Shield(
                 name,

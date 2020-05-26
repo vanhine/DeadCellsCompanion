@@ -27,6 +27,12 @@ class TrapsFragment : Fragment(R.layout.traps_fragment) {
             )
         recyclerView.addItemDecoration(gridItemOffsetDecoration)
         recyclerView.adapter = gearItemAdapter
+        gearItemAdapter.onItemClick = { gearItem ->
+            val fragmentTransaction = parentFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.main_view_frame, GearInfoFragment(gearItem))
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+        }
         gearViewModel.traps.observe(viewLifecycleOwner, Observer { traps ->
             gearItemAdapter.gearList = traps
             gearItemAdapter.notifyDataSetChanged()

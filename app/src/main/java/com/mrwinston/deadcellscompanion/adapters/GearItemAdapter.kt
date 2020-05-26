@@ -11,11 +11,18 @@ import kotlinx.android.synthetic.main.grid_item_view.view.*
 
 class GearItemAdapter :
     RecyclerView.Adapter<GearItemAdapter.GearItemViewHolder>() {
+    var onItemClick: ((GearItem) -> Unit)? = null
     var gearList = listOf<GearItem>()
 
-    class GearItemViewHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class GearItemViewHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val gearImage = itemView.item_image
         private val gearName = itemView.item_name
+
+        init {
+            itemView.setOnClickListener {
+                onItemClick?.invoke(gearList[adapterPosition])
+            }
+        }
 
         fun bind(gearItem: GearItem) {
             Glide.with(itemView).load(gearItem.imageUrl).into(gearImage)

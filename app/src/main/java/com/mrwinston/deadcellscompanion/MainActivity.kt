@@ -1,15 +1,45 @@
 package com.mrwinston.deadcellscompanion
 
+import android.opengl.Visibility
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
 import com.mrwinston.deadcellscompanion.fragments.*
 
 class MainActivity : FragmentActivity() {
+    private lateinit var auth: FirebaseAuth
+    private lateinit var bottomNavigationView: BottomNavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        auth = FirebaseAuth.getInstance()
+        bottomNavigationView = findViewById(R.id.bottom_navigation)
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val currentUser = auth.currentUser
+        loadFragment()
+        auth.signInAnonymously()
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    Log.d(TAG, "signedInAnonymously:success")
+                    val user = auth.currentUser
+                    loadFragment()
+                } else {
+                    Log.d(TAG, "Failed to login anonymously", task.exception)
+                    Toast.makeText(this, "Could Not authenticate", Toast.LENGTH_LONG).show()
+                }
+            }
+    }
+
+    private fun loadFragment() {
         val fragmentManager = supportFragmentManager
         bottomNavigationView.setOnNavigationItemSelectedListener {
             val fragmentTransaction = fragmentManager.beginTransaction()

@@ -27,6 +27,12 @@ class PowersFragment : Fragment(R.layout.powers_fragment) {
             )
         recyclerView.addItemDecoration(gridItemOffsetDecoration)
         recyclerView.adapter = gearItemAdapter
+        gearItemAdapter.onItemClick = { gearItem ->
+            val fragmentTransaction = parentFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.main_view_frame, GearInfoFragment(gearItem))
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
+        }
         gearViewModel.powers.observe(viewLifecycleOwner, Observer { powers ->
             gearItemAdapter.gearList = powers
             gearItemAdapter.notifyDataSetChanged()

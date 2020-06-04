@@ -6,8 +6,9 @@ import androidx.lifecycle.MutableLiveData
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.mrwinston.deadcellscompanion.data.model.*
+import javax.inject.Inject
 
-class GearRepository {
+class GearRepository @Inject constructor() {
     private val db = Firebase.firestore
 
     fun provideMeleeWeapons(): LiveData<List<MeleeWeapon>> {

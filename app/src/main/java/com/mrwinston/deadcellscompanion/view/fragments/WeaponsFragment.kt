@@ -1,17 +1,30 @@
 package com.mrwinston.deadcellscompanion.view.fragments
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.mrwinston.deadcellscompanion.R
+import com.mrwinston.deadcellscompanion.view.MainActivity
 import kotlinx.android.synthetic.main.weapon_list_fragment.*
 
 class WeaponsFragment : Fragment(R.layout.weapon_list_fragment) {
+    // TODO(vanhine): convert this to be injected
     private lateinit var weaponsFragmentAdapter: WeaponsFragmentAdapter
     private lateinit var viewPager: ViewPager2
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        (activity as MainActivity).appComponent.inject(this)
+        return super.onCreateView(inflater, container, savedInstanceState)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         weaponsFragmentAdapter =
@@ -32,7 +45,7 @@ class WeaponsFragment : Fragment(R.layout.weapon_list_fragment) {
         override fun getItemCount() = 2
 
         override fun createFragment(position: Int): Fragment {
-            return when(position) {
+            return when (position) {
                 0 -> MeleeWeaponsFragment()
                 else -> RangedWeaponsFragment()
             }

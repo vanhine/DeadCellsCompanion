@@ -6,17 +6,23 @@ import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.mrwinston.deadcellscompanion.MyApplication
 import com.mrwinston.deadcellscompanion.R
+import com.mrwinston.deadcellscompanion.di.AppComponent
 import com.mrwinston.deadcellscompanion.view.fragments.*
+import javax.inject.Inject
 
 class MainActivity : FragmentActivity() {
-    private lateinit var auth: FirebaseAuth
+    @Inject
+    lateinit var auth: FirebaseAuth
     private lateinit var bottomNavigationView: BottomNavigationView
+    lateinit var appComponent: AppComponent
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        appComponent = (applicationContext as MyApplication).appComponent
+        appComponent.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        auth = FirebaseAuth.getInstance()
         bottomNavigationView = findViewById(R.id.bottom_navigation)
     }
 
@@ -39,7 +45,7 @@ class MainActivity : FragmentActivity() {
         val fragmentManager = supportFragmentManager
         bottomNavigationView.setOnNavigationItemSelectedListener {
             val fragmentTransaction = fragmentManager.beginTransaction()
-            val fragment = when(it.itemId) {
+            val fragment = when (it.itemId) {
                 R.id.bottom_nav_weapons -> WeaponsFragment()
                 R.id.bottom_nav_shields -> ShieldsFragment()
                 R.id.bottom_nav_grenades -> GrenadesFragment()

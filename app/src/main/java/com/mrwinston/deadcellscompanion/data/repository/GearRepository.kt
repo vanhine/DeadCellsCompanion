@@ -3,13 +3,11 @@ package com.mrwinston.deadcellscompanion.data.repository
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
+import com.google.firebase.firestore.FirebaseFirestore
 import com.mrwinston.deadcellscompanion.data.model.*
 import javax.inject.Inject
 
-class GearRepository @Inject constructor() {
-    private val db = Firebase.firestore
+class GearRepository @Inject constructor(private val db: FirebaseFirestore) {
 
     fun provideMeleeWeapons(): LiveData<List<MeleeWeapon>> {
         val meleeWeaponList = mutableListOf<MeleeWeapon>()

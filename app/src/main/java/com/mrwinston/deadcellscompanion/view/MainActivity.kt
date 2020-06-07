@@ -45,6 +45,7 @@ class MainActivity : FragmentActivity() {
         val fragmentManager = supportFragmentManager
         bottomNavigationView.setOnNavigationItemSelectedListener {
             val fragmentTransaction = fragmentManager.beginTransaction()
+            //TODO(hine): Add a loading progress bar
             val fragment = when (it.itemId) {
                 R.id.bottom_nav_weapons -> WeaponsFragment()
                 R.id.bottom_nav_shields -> ShieldsFragment()

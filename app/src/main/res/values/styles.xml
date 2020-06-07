@@ -7,4 +7,25 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorOnBackground">@color/cardColor</item>
     </style>
+
+    <style name="InfoViewItemTitle" parent="TextAppearance.AppCompat.Display1">
+        <item name="android:textStyle">bold</item>
+        <!--TODO(hine): Use awesome font instead of default-->
+    </style>
+
+    <style name="InfoViewItemDescriptionHeading" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="InfoViewExtraInfoHeading" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

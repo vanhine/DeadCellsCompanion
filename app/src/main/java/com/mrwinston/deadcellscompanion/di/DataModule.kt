@@ -4,7 +4,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.mrwinston.deadcellscompanion.data.repository.GearRepository
+import com.mrwinston.deadcellscompanion.data.repository.GearRepositoryImpl
 import com.mrwinston.deadcellscompanion.util.adapters.GearItemAdapter
 import com.mrwinston.deadcellscompanion.viewmodel.GearViewModel
 import com.mrwinston.deadcellscompanion.viewmodel.GearViewModelFactory
@@ -12,18 +12,14 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class DataModule {
+abstract class DataModule {
     companion object {
         @Provides
-        fun provideGearViewModel(repository: GearRepository): GearViewModel =
+        fun provideGearViewModel(repository: GearRepositoryImpl): GearViewModel =
             GearViewModel(repository)
 
         @Provides
         fun providesGearViewModelFactory(): GearViewModelFactory = GearViewModelFactory()
-
-        @Provides
-        fun provideGearRepository(firebaseFirestore: FirebaseFirestore): GearRepository =
-            GearRepository(firebaseFirestore)
 
         @Provides
         fun provideFirebaseFirestore(): FirebaseFirestore = Firebase.firestore

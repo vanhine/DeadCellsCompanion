@@ -1,9 +1,7 @@
 package com.mrwinston.deadcellscompanion.view.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.mrwinston.deadcellscompanion.R
@@ -16,16 +14,9 @@ class GearInfoFragment(val gearItem: GearItem) : Fragment(R.layout.gear_info_fra
         view.description.text = gearItem.description
         view.blueprint_location.text = gearItem.blueprintLocation
         Glide.with(view).load(gearItem.imageUrl).into(view.image)
-        when(gearItem.scalingUrl) {
-            BRUT_URL -> view.image.background = ContextCompat.getDrawable(requireContext(), R.drawable.brut_image_background)
-            BRUT_TACT_URL -> view.image.background = ContextCompat.getDrawable(requireContext(), R.drawable.brut_tact_image_background)
-            BRUT_SURV_URL -> view.image.background = ContextCompat.getDrawable(requireContext(), R.drawable.brut_surv_image_background)
-            TACT_URL -> view.image.background = ContextCompat.getDrawable(requireContext(), R.drawable.tact_image_background)
-            SURV_URL -> view.image.background = ContextCompat.getDrawable(requireContext(), R.drawable.surv_image_background)
-            TACT__SURV_URL -> view.image.background = ContextCompat.getDrawable(requireContext(), R.drawable.tact_surv_image_background)
-        }
-        Log.d("GEARINFO", gearItem.scalingUrl)
-        when(gearItem) {
+        Glide.with(view).load(gearItem.scalingUrl).into(view.scaling_image)
+
+        when (gearItem) {
             is MeleeWeapon -> {
                 view.apply {
                     extra_info_1_label.text = context.getString(R.string.base_dps)
@@ -87,14 +78,5 @@ class GearInfoFragment(val gearItem: GearItem) : Fragment(R.layout.gear_info_fra
                 }
             }
         }
-    }
-
-    companion object {
-        private const val BRUT_URL = "https://gamepedia.cursecdn.com/deadcells_gamepedia_en/thumb/5/51/Strength_Stat.png/34px-Strength_Stat.png?version=a29deb6da6ec251797819f83c929286e"
-        private const val BRUT_TACT_URL = "https://gamepedia.cursecdn.com/deadcells_gamepedia_en/thumb/5/58/Str_Skill.png/34px-Str_Skill.png?version=c989b620d39769a33ebc0ba7a9a61d86"
-        private const val BRUT_SURV_URL = "https://gamepedia.cursecdn.com/deadcells_gamepedia_en/thumb/a/aa/Str_Hp.png/34px-Str_Hp.png?version=a9290818b18c76c7892e6033019aac70"
-        private const val TACT_URL = "https://gamepedia.cursecdn.com/deadcells_gamepedia_en/thumb/2/27/Skill_Stat.png/34px-Skill_Stat.png?version=e9640dc8f059333044ae4615969637c9"
-        private const val TACT__SURV_URL = "https://gamepedia.cursecdn.com/deadcells_gamepedia_en/thumb/0/05/Skill_Hp.png/34px-Skill_Hp.png?version=b9ac8bbbdba6e806bc7afab351ade39b"
-        private const val SURV_URL = "https://gamepedia.cursecdn.com/deadcells_gamepedia_en/thumb/9/90/Health_Stat.png/34px-Health_Stat.png?version=ded56e1a5bd0f867ffd36883f541a3bb"
     }
 }

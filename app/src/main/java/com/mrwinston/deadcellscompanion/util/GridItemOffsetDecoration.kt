@@ -4,8 +4,14 @@ import android.content.Context
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import kotlin.properties.Delegates
 
+/**
+ * RecyclerView Item decoration which sets the margins for an item.
+ *
+ * This helps center the items properly.
+ *
+ * @param itemOffset is the size (in dp) to set the margins to.
+ */
 class GridItemOffsetDecoration(val itemOffset: Int) : RecyclerView.ItemDecoration() {
     constructor(
         context: Context,

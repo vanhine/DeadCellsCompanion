@@ -9,6 +9,11 @@ import com.mrwinston.deadcellscompanion.R
 import com.mrwinston.deadcellscompanion.data.model.GearItem
 import kotlinx.android.synthetic.main.grid_item_view.view.*
 
+/**
+ * Adapter used to display an item in a grid view.
+ *
+ * An icon will be shown with the items image as well as name.
+ */
 class GearItemAdapter :
     RecyclerView.Adapter<GearItemAdapter.GearItemViewHolder>() {
     var onItemClick: ((GearItem) -> Unit)? = null

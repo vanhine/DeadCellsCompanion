@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.mrwinston.deadcellscompanion.data.repository.GearRepositoryImpl
 import javax.inject.Inject
 
+/* Factory used to provide GearViewModel. */
 class GearViewModelFactory @Inject constructor() : ViewModelProvider.Factory {
 
     @Inject

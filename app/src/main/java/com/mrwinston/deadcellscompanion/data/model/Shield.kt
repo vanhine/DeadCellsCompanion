@@ -1,6 +1,6 @@
 package com.mrwinston.deadcellscompanion.data.model
 
-data class Shield (
+data class Shield(
     override val name: String,
     override val description: String,
     override val blueprintLocation: String,
@@ -11,9 +11,14 @@ data class Shield (
     override val imageUrl: String
 ) : GearItem {
     companion object {
+        /**
+         * Converts a document to a [Shield] object
+         *
+         * @param document is a map containing attributes about a [Shield].
+         */
         fun documentToShield(document: Map<String, Any>): Shield {
             val name = document["name"].toString()
-            val description= document["description"].toString()
+            val description = document["description"].toString()
             val blueprintLocation = document["blueprint_location"].toString()
             val blockDamage = document["block_damage"].toString()
             val parryDamage = document["parry_damage"].toString()
@@ -28,7 +33,8 @@ data class Shield (
                 parryDamage,
                 absorbDamage,
                 scalingUrl,
-                imageUrl)
+                imageUrl
+            )
         }
     }
 }

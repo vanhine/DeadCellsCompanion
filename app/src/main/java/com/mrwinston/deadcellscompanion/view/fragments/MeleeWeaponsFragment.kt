@@ -16,6 +16,7 @@ import com.mrwinston.deadcellscompanion.viewmodel.GearViewModel
 import kotlinx.android.synthetic.main.melee_weapons_fragment.*
 import javax.inject.Inject
 
+/* Fragment which displays all Melee Weapons in a grid. */
 class MeleeWeaponsFragment : Fragment(R.layout.melee_weapons_fragment) {
     @Inject
     lateinit var gearViewModel: GearViewModel

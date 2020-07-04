@@ -1,6 +1,6 @@
 package com.mrwinston.deadcellscompanion.data.model
 
-data class TrapOrTurret (
+data class TrapOrTurret(
     override val name: String,
     override val description: String,
     override val blueprintLocation: String,
@@ -10,9 +10,14 @@ data class TrapOrTurret (
     override val imageUrl: String
 ) : GearItem {
     companion object {
+        /**
+         * Converts a document to a [TrapOrTurret] object
+         *
+         * @param document is a map containing attributes about a [TrapOrTurret].
+         */
         fun documentToTrapOrTurret(document: Map<String, Any>): TrapOrTurret {
             val name = document["name"].toString()
-            val description= document["description"].toString()
+            val description = document["description"].toString()
             val blueprintLocation = document["blueprint_location"].toString()
             val baseDamage = document["base_damage"].toString()
             val baseCooldownTime = document["base_cooldown_time"].toString()
@@ -25,7 +30,8 @@ data class TrapOrTurret (
                 baseDamage,
                 baseCooldownTime,
                 scalingUrl,
-                imageUrl)
+                imageUrl
+            )
         }
     }
 }

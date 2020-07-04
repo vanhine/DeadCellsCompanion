@@ -2,7 +2,6 @@ package com.mrwinston.deadcellscompanion.view
 
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -36,7 +35,6 @@ class MainActivity : FragmentActivity() {
                     loadFragment()
                 } else {
                     Log.d(TAG, "Failed to login anonymously", task.exception)
-                    Toast.makeText(this, "Could Not authenticate", Toast.LENGTH_LONG).show()
                 }
             }
     }
@@ -63,6 +61,6 @@ class MainActivity : FragmentActivity() {
     }
 
     companion object {
-        private val TAG = "MainActivity"
+        private const val TAG = "MainActivity"
     }
 }

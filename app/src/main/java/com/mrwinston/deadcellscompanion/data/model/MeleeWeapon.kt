@@ -10,9 +10,14 @@ data class MeleeWeapon(
     override val imageUrl: String
 ) : GearItem {
     companion object {
+        /**
+         * Converts a document to a [MeleeWeapon] object
+         *
+         * @param document is a map containing attributes about a [MeleeWeapon].
+         */
         fun documentToMeleeWeapon(document: Map<String, Any>): MeleeWeapon {
             val name = document["name"].toString()
-            val description= document["description"].toString()
+            val description = document["description"].toString()
             val blueprintLocation = document["blueprint_location"].toString()
             val baseDps = document["base_dps"].toString()
             val baseSpecialDps = document["base_special_dps"].toString()
@@ -25,7 +30,8 @@ data class MeleeWeapon(
                 baseDps,
                 baseSpecialDps,
                 scalingUrl,
-                imageUrl)
+                imageUrl
+            )
         }
     }
 }

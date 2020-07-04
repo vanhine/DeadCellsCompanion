@@ -16,6 +16,7 @@ import com.mrwinston.deadcellscompanion.viewmodel.GearViewModel
 import kotlinx.android.synthetic.main.ranged_weapons_fragment.*
 import javax.inject.Inject
 
+/* Fragment which displays all Ranged Weapons in a grid. */
 class RangedWeaponsFragment : Fragment(R.layout.ranged_weapons_fragment) {
     @Inject
     lateinit var gearViewModel: GearViewModel

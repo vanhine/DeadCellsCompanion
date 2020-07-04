@@ -6,6 +6,7 @@ import com.mrwinston.deadcellscompanion.data.model.*
 import com.mrwinston.deadcellscompanion.data.repository.GearRepository
 import javax.inject.Inject
 
+/* View Model responsible for retrieving item data. */
 class GearViewModel @Inject constructor(gearRepository: GearRepository) : ViewModel() {
 
     val meleeWeapons: LiveData<List<MeleeWeapon>> = gearRepository.provideMeleeWeapons()

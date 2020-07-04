@@ -11,9 +11,14 @@ data class Power(
     override val imageUrl: String
 ) : GearItem {
     companion object {
+        /**
+         * Converts a document to a [Power] object
+         *
+         * @param document is a map containing attributes about a [Power].
+         */
         fun documentToPower(document: Map<String, Any>): Power {
             val name = document["name"].toString()
-            val description= document["description"].toString()
+            val description = document["description"].toString()
             val blueprintLocation = document["blueprint_location"].toString()
             val baseDamage = document["base_damage"].toString()
             val baseCooldownTime = document["base_cooldown_time"].toString()
@@ -28,7 +33,8 @@ data class Power(
                 baseCooldownTime,
                 damageReduction,
                 scalingUrl,
-                imageUrl)
+                imageUrl
+            )
         }
     }
 }

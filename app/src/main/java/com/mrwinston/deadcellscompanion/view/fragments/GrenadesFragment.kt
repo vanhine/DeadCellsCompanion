@@ -16,9 +16,7 @@ import com.mrwinston.deadcellscompanion.viewmodel.GearViewModel
 import kotlinx.android.synthetic.main.grenades_fragment.*
 import javax.inject.Inject
 
-/**
- * A simple [Fragment] subclass.
- */
+/* Fragment which displays all Grenades in a grid. */
 class GrenadesFragment : Fragment(R.layout.grenades_fragment) {
     @Inject
     lateinit var gearViewModel: GearViewModel

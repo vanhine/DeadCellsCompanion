@@ -12,6 +12,7 @@ import com.mrwinston.deadcellscompanion.R
 import com.mrwinston.deadcellscompanion.view.MainActivity
 import kotlinx.android.synthetic.main.weapon_list_fragment.*
 
+/* Fragment which holds both Melee and Ranged weapons and displays them separate tabs. */
 class WeaponsFragment : Fragment(R.layout.weapon_list_fragment) {
     // TODO(vanhine): convert this to be injected
     private lateinit var weaponsFragmentAdapter: WeaponsFragmentAdapter
@@ -51,9 +52,5 @@ class WeaponsFragment : Fragment(R.layout.weapon_list_fragment) {
             }
         }
 
-    }
-
-    companion object {
-        private val TAG = "WeaponsFragment"
     }
 }

@@ -3,22 +3,22 @@
     <item
         android:id="@+id/bottom_nav_weapons"
         android:icon="@drawable/bottom_bar_sword_white"
-        android:title="Weapons"
-        android:enabled="true"/>
+        android:title="@string/weapons"
+        android:enabled="true" />
     <item
         android:id="@+id/bottom_nav_shields"
         android:icon="@drawable/bottom_bar_shield"
-        android:title="Shields"/>
+        android:title="@string/shields" />
     <item
         android:id="@+id/bottom_nav_grenades"
         android:icon="@drawable/bottom_bar_bomb_white"
-        android:title="Grenades"/>
+        android:title="@string/grenades" />
     <item
         android:id="@+id/bottom_nav_traps"
-        android:icon="@drawable/bottom_bar_mask_white"
-        android:title="Traps"/>
+        android:icon="@drawable/bottom_bar_trap_white"
+        android:title="@string/traps" />
     <item
         android:id="@+id/bottom_nav_powers"
-        android:icon="@drawable/bottom_bar_penguin_white"
-        android:title="Powers"/>
+        android:icon="@drawable/bottom_bar_power_white"
+        android:title="@string/powers" />
 </menu>

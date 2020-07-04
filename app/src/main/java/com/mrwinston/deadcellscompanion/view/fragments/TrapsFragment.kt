@@ -16,6 +16,7 @@ import com.mrwinston.deadcellscompanion.viewmodel.GearViewModel
 import kotlinx.android.synthetic.main.traps_fragment.*
 import javax.inject.Inject
 
+/* Fragment which displays all Traps in a grid. */
 class TrapsFragment : Fragment(R.layout.traps_fragment) {
     @Inject
     lateinit var gearViewModel: GearViewModel

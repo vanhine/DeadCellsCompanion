@@ -16,6 +16,7 @@ import com.mrwinston.deadcellscompanion.viewmodel.GearViewModel
 import kotlinx.android.synthetic.main.powers_fragment.*
 import javax.inject.Inject
 
+/* Fragment which displays all Powers in a grid. */
 class PowersFragment : Fragment(R.layout.powers_fragment) {
     @Inject
     lateinit var gearViewModel: GearViewModel

@@ -17,4 +17,9 @@
     <string name="blueprint_location">Blueprint Location</string>
     <string name="description_title">Description</string>
     <string name="type_of_item_image">Type of Item Image</string>
+    <string name="weapons">Weapons</string>
+    <string name="shields">Shields</string>
+    <string name="grenades">Grenades</string>
+    <string name="traps">Traps</string>
+    <string name="powers">Powers</string>
 </resources>

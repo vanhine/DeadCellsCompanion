@@ -8,6 +8,13 @@ import com.mrwinston.deadcellscompanion.R
 import com.mrwinston.deadcellscompanion.data.model.*
 import kotlinx.android.synthetic.main.gear_info_fragment.view.*
 
+/**
+ * The Fragment which displays an individual piece of gear.
+ *
+ * Lays out all the information related to a specific type of item.
+ *
+ * @param gearItem is the item to be displayed
+ */
 class GearInfoFragment(val gearItem: GearItem) : Fragment(R.layout.gear_info_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         view.item_name.text = gearItem.name

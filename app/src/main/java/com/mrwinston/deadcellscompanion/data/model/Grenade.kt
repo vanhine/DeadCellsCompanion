@@ -11,9 +11,14 @@ data class Grenade(
     override val imageUrl: String
 ) : GearItem {
     companion object {
-        fun documentToItem(document: Map<String, Any>): Grenade {
+        /**
+         * Converts a document to a [Grenade] object.
+         *
+         * @param document is a map containing attributes about a [Grenade].
+         */
+        fun documentToGrenade(document: Map<String, Any>): Grenade {
             val name = document["name"].toString()
-            val description= document["description"].toString()
+            val description = document["description"].toString()
             val blueprintLocation = document["blueprint_location"].toString()
             val baseDamage = document["base_damage"].toString()
             val baseCooldownTime = document["base_cooldown_time"].toString()
@@ -28,7 +33,8 @@ data class Grenade(
                 baseCooldownTime,
                 damageReduction,
                 scalingUrl,
-                imageUrl)
+                imageUrl
+            )
         }
     }
 }

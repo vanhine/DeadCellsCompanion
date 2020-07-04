@@ -16,9 +16,7 @@ import com.mrwinston.deadcellscompanion.viewmodel.GearViewModel
 import kotlinx.android.synthetic.main.shields_fragment.*
 import javax.inject.Inject
 
-/**
- * A simple [Fragment] subclass.
- */
+/* Fragment which displays all Shields in a grid. */
 class ShieldsFragment : Fragment(R.layout.shields_fragment) {
     @Inject
     lateinit var gearViewModel: GearViewModel
@@ -61,9 +59,5 @@ class ShieldsFragment : Fragment(R.layout.shields_fragment) {
             gearItemAdapter.gearList = shields
             gearItemAdapter.notifyDataSetChanged()
         })
-    }
-
-    companion object {
-        private val TAG = "ShieldsFragment"
     }
 }

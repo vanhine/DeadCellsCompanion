@@ -46,11 +46,10 @@ class TrapsFragment : Fragment(R.layout.traps_fragment) {
         recyclerView.adapter = gearItemAdapter
         gearItemAdapter.onItemClick = { gearItem ->
             val fragmentTransaction = parentFragmentManager.beginTransaction()
+            gearViewModel.selectedItem(gearItem)
             fragmentTransaction.replace(
                 R.id.main_view_frame,
-                GearInfoFragment(
-                    gearItem
-                )
+                GearInfoFragment()
             )
             fragmentTransaction.addToBackStack(null)
             fragmentTransaction.commit()

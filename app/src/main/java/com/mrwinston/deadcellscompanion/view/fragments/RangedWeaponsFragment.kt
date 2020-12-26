@@ -46,11 +46,10 @@ class RangedWeaponsFragment : Fragment(R.layout.ranged_weapons_fragment) {
         recyclerView.adapter = gearItemAdapter
         gearItemAdapter.onItemClick = { gearItem ->
             val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
+            gearViewModel.selectedItem(gearItem)
             fragmentTransaction?.replace(
                 R.id.main_view_frame,
-                GearInfoFragment(
-                    gearItem
-                )
+                GearInfoFragment()
             )
             fragmentTransaction?.addToBackStack(null)
             fragmentTransaction?.commit()

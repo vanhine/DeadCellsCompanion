@@ -6,11 +6,9 @@ import com.mrwinston.deadcellscompanion.data.repository.GearRepositoryImpl
 import javax.inject.Inject
 
 /* Factory used to provide GearViewModel. */
-class GearViewModelFactory @Inject constructor() : ViewModelProvider.Factory {
-
-    @Inject
-    lateinit var repository: GearRepositoryImpl
-
+class GearViewModelFactory @Inject constructor(private val repository: GearRepositoryImpl) :
+    ViewModelProvider.Factory {
+    
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(GearViewModel::class.java)) {

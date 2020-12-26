@@ -1,6 +1,7 @@
 package com.mrwinston.deadcellscompanion.view.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -45,12 +46,12 @@ class MeleeWeaponsFragment : Fragment(R.layout.melee_weapons_fragment) {
         recyclerView.addItemDecoration(gridItemOffsetDecoration)
         recyclerView.adapter = gearItemAdapter
         gearItemAdapter.onItemClick = { gearItem ->
+            Log.d("Melee", "Setting selectedItem to ${gearItem.name}")
+            gearViewModel.selectedItem(gearItem)
             val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
             fragmentTransaction?.replace(
                 R.id.main_view_frame,
-                GearInfoFragment(
-                    gearItem
-                )
+                GearInfoFragment()
             )
             fragmentTransaction?.addToBackStack(null)
             fragmentTransaction?.commit()

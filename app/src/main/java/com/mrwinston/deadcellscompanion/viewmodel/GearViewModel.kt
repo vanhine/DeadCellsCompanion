@@ -1,6 +1,8 @@
 package com.mrwinston.deadcellscompanion.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.mrwinston.deadcellscompanion.data.model.*
 import com.mrwinston.deadcellscompanion.data.repository.GearRepository
@@ -15,4 +17,10 @@ class GearViewModel @Inject constructor(gearRepository: GearRepository) : ViewMo
     val grenades: LiveData<List<Grenade>> = gearRepository.provideGrenades()
     val traps: LiveData<List<TrapOrTurret>> = gearRepository.provideTraps()
     val powers: LiveData<List<Power>> = gearRepository.providePowers()
+
+    val selected = MutableLiveData<GearItem>()
+    fun selectedItem(item: GearItem) {
+        Log.d("VM", "Setting ${item.name}")
+        selected.value = item
+    }
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_nav_weapons"
+        android:icon="@drawable/bottom_bar_sword_white"
+        android:title="@string/weapons"
+        android:enabled="true" />
+    <item
+        android:id="@+id/bottom_nav_shields"
+        android:icon="@drawable/bottom_bar_shield"
+        android:title="@string/shields" />
+    <item
+        android:id="@+id/bottom_nav_grenades"
+        android:icon="@drawable/bottom_bar_bomb_white"
+        android:title="@string/grenades" />
+    <item
+        android:id="@+id/bottom_nav_traps"
+        android:icon="@drawable/bottom_bar_trap_white"
+        android:title="@string/traps" />
+    <item
+        android:id="@+id/bottom_nav_powers"
+        android:icon="@drawable/bottom_bar_power_white"
+        android:title="@string/powers" />
+</menu>

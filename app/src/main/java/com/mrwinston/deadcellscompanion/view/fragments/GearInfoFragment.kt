@@ -60,8 +60,8 @@ class GearInfoFragment(val gearItem: GearItem) : Fragment(R.layout.gear_info_fra
                     extra_info_1.text = gearItem.baseDamage
                     extra_info_2_label.text = context.getString(R.string.base_cooldown_time)
                     extra_info_2.text = gearItem.baseCooldownTime
-                    extra_info_3_label.text = context.getString(R.string.damage_reduction)
-                    extra_info_3.text = gearItem.damageReduction
+                    extra_info_3_label.visibility = View.GONE
+                    extra_info_3.visibility = View.GONE
                 }
             }
             is TrapOrTurret -> {
@@ -80,8 +80,8 @@ class GearInfoFragment(val gearItem: GearItem) : Fragment(R.layout.gear_info_fra
                     extra_info_1.text = gearItem.baseDamage
                     extra_info_2_label.text = context.getString(R.string.base_cooldown_time)
                     extra_info_2.text = gearItem.baseCooldownTime
-                    extra_info_3_label.text = context.getString(R.string.damage_reduction)
-                    extra_info_3.text = gearItem.damageReduction
+                    extra_info_3_label.visibility = View.GONE
+                    extra_info_3.visibility = View.GONE
                 }
             }
         }

@@ -3,8 +3,7 @@
 Dead Cells Companion provides information about the items found in the Dead Cells video game. This
 includes where to find the items and their stats.
 
-<img src="docs/gear_page.png" alt="Gear Page" width="200"/>
-<img src="docs/info_page.png" alt="Info Page" width="200"/>
+<img src="docs/gear_page.png" alt="Gear Page" width="200"/><img src="docs/info_page.png" alt="Info Page" width="300"/>
 
 
 [![Get it on Google Play](docs/play_badge.png)](https://play.google.com/store/apps/details?id=com.mrwinston.deadcellscompanion&hl=en_US&gl=US)

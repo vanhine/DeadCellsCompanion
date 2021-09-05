@@ -5,10 +5,9 @@ includes where to find the items and their stats.
 
 <img src="docs/gear_page.png" alt="Gear Page" width="300"/><img src="docs/info_page.png" alt="Info Page" width="300"/>
 
+<a href="https://play.google.com/store/apps/details?id=com.mrwinston.deadcellscompanion&hl=en_US&gl=US"><img src="docs/play_badge.png" alt="Get it on Google Play" width="200"/></a>
 
-[![Get it on Google Play](docs/play_badge.png)](https://play.google.com/store/apps/details?id=com.mrwinston.deadcellscompanion&hl=en_US&gl=US)
-
-## Backend Info
+## Info
 
 The data about the items and their stats are sourced from the
 [Dead Cells Wiki Gear Page](https://deadcells.fandom.com/wiki/Gear). A web scraper scrapes the

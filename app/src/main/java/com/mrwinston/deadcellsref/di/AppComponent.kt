@@ -1,9 +1,9 @@
-package com.mrwinston.deadcellscompanion.di
+package com.mrwinston.deadcellsref.di
 
-import com.mrwinston.deadcellscompanion.data.repository.GearRepositoryImpl
-import com.mrwinston.deadcellscompanion.view.MainActivity
-import com.mrwinston.deadcellscompanion.view.fragments.*
-import com.mrwinston.deadcellscompanion.viewmodel.GearViewModel
+import com.mrwinston.deadcellsref.data.repository.GearRepositoryImpl
+import com.mrwinston.deadcellsref.view.MainActivity
+import com.mrwinston.deadcellsref.view.fragments.*
+import com.mrwinston.deadcellsref.viewmodel.GearViewModel
 import dagger.Component
 import javax.inject.Singleton
 

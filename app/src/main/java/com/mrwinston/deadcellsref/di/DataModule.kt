@@ -1,13 +1,13 @@
-package com.mrwinston.deadcellscompanion.di
+package com.mrwinston.deadcellsref.di
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.mrwinston.deadcellscompanion.data.repository.GearRepositoryImpl
-import com.mrwinston.deadcellscompanion.util.adapters.GearItemAdapter
-import com.mrwinston.deadcellscompanion.viewmodel.GearViewModel
-import com.mrwinston.deadcellscompanion.viewmodel.GearViewModelFactory
+import com.mrwinston.deadcellsref.data.repository.GearRepositoryImpl
+import com.mrwinston.deadcellsref.util.adapters.GearItemAdapter
+import com.mrwinston.deadcellsref.viewmodel.GearViewModel
+import com.mrwinston.deadcellsref.viewmodel.GearViewModelFactory
 import dagger.Module
 import dagger.Provides
 

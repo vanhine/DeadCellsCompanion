@@ -1,12 +1,12 @@
-package com.mrwinston.deadcellscompanion.util.adapters
+package com.mrwinston.deadcellsref.util.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.mrwinston.deadcellscompanion.R
-import com.mrwinston.deadcellscompanion.data.model.GearItem
+import com.mrwinston.deadcellsref.R
+import com.mrwinston.deadcellsref.data.model.GearItem
 import kotlinx.android.synthetic.main.grid_item_view.view.*
 
 /**

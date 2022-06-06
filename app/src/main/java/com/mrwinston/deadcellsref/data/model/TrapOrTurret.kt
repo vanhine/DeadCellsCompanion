@@ -1,4 +1,4 @@
-package com.mrwinston.deadcellscompanion.data.model
+package com.mrwinston.deadcellsref.data.model
 
 data class TrapOrTurret(
     override val name: String,

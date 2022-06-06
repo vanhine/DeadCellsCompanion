@@ -1,9 +1,9 @@
-package com.mrwinston.deadcellscompanion.viewmodel
+package com.mrwinston.deadcellsref.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.mrwinston.deadcellscompanion.data.model.*
-import com.mrwinston.deadcellscompanion.data.repository.GearRepository
+import com.mrwinston.deadcellsref.data.model.*
+import com.mrwinston.deadcellsref.data.repository.GearRepository
 import javax.inject.Inject
 
 /* View Model responsible for retrieving item data. */

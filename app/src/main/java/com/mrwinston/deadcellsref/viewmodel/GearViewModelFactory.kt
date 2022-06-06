@@ -1,8 +1,8 @@
-package com.mrwinston.deadcellscompanion.viewmodel
+package com.mrwinston.deadcellsref.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.mrwinston.deadcellscompanion.data.repository.GearRepositoryImpl
+import com.mrwinston.deadcellsref.data.repository.GearRepositoryImpl
 import javax.inject.Inject
 
 /* Factory used to provide GearViewModel. */

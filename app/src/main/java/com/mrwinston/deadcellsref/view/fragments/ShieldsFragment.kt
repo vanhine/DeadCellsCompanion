@@ -1,4 +1,4 @@
-package com.mrwinston.deadcellscompanion.view.fragments
+package com.mrwinston.deadcellsref.view.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,11 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.mrwinston.deadcellscompanion.R
-import com.mrwinston.deadcellscompanion.util.GridItemOffsetDecoration
-import com.mrwinston.deadcellscompanion.util.adapters.GearItemAdapter
-import com.mrwinston.deadcellscompanion.view.MainActivity
-import com.mrwinston.deadcellscompanion.viewmodel.GearViewModel
+import com.mrwinston.deadcellsref.R
+import com.mrwinston.deadcellsref.util.GridItemOffsetDecoration
+import com.mrwinston.deadcellsref.util.adapters.GearItemAdapter
+import com.mrwinston.deadcellsref.view.MainActivity
+import com.mrwinston.deadcellsref.viewmodel.GearViewModel
 import kotlinx.android.synthetic.main.shields_fragment.*
 import javax.inject.Inject
 

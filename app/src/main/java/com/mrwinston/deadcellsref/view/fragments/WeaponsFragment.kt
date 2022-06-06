@@ -1,4 +1,4 @@
-package com.mrwinston.deadcellscompanion.view.fragments
+package com.mrwinston.deadcellsref.view.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
-import com.mrwinston.deadcellscompanion.R
-import com.mrwinston.deadcellscompanion.view.MainActivity
+import com.mrwinston.deadcellsref.R
+import com.mrwinston.deadcellsref.view.MainActivity
 import kotlinx.android.synthetic.main.weapon_list_fragment.*
 
 /* Fragment which holds both Melee and Ranged weapons and displays them separate tabs. */

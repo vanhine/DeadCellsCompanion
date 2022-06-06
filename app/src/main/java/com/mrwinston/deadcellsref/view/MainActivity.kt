@@ -1,14 +1,14 @@
-package com.mrwinston.deadcellscompanion.view
+package com.mrwinston.deadcellsref.view
 
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.FragmentActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import com.mrwinston.deadcellscompanion.MyApplication
-import com.mrwinston.deadcellscompanion.R
-import com.mrwinston.deadcellscompanion.di.AppComponent
-import com.mrwinston.deadcellscompanion.view.fragments.*
+import com.mrwinston.deadcellsref.MyApplication
+import com.mrwinston.deadcellsref.R
+import com.mrwinston.deadcellsref.di.AppComponent
+import com.mrwinston.deadcellsref.view.fragments.*
 import javax.inject.Inject
 
 class MainActivity : FragmentActivity() {

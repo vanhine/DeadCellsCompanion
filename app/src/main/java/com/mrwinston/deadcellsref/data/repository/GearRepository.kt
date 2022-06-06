@@ -1,7 +1,7 @@
-package com.mrwinston.deadcellscompanion.data.repository
+package com.mrwinston.deadcellsref.data.repository
 
 import androidx.lifecycle.LiveData
-import com.mrwinston.deadcellscompanion.data.model.*
+import com.mrwinston.deadcellsref.data.model.*
 
 interface GearRepository {
     fun provideMeleeWeapons(): LiveData<List<MeleeWeapon>>

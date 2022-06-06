@@ -1,7 +1,7 @@
-package com.mrwinston.deadcellscompanion.di
+package com.mrwinston.deadcellsref.di
 
-import com.mrwinston.deadcellscompanion.data.repository.GearRepository
-import com.mrwinston.deadcellscompanion.data.repository.GearRepositoryImpl
+import com.mrwinston.deadcellsref.data.repository.GearRepository
+import com.mrwinston.deadcellsref.data.repository.GearRepositoryImpl
 import dagger.Binds
 import dagger.Module
 

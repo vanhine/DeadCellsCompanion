@@ -1,11 +1,11 @@
-package com.mrwinston.deadcellscompanion.view.fragments
+package com.mrwinston.deadcellsref.view.fragments
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
-import com.mrwinston.deadcellscompanion.R
-import com.mrwinston.deadcellscompanion.data.model.*
+import com.mrwinston.deadcellsref.R
+import com.mrwinston.deadcellsref.data.model.*
 import kotlinx.android.synthetic.main.gear_info_fragment.view.*
 
 /**

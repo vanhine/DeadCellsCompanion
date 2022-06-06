@@ -1,8 +1,8 @@
-package com.mrwinston.deadcellscompanion
+package com.mrwinston.deadcellsref
 
 import android.app.Application
-import com.mrwinston.deadcellscompanion.di.AppComponent
-import com.mrwinston.deadcellscompanion.di.DaggerAppComponent
+import com.mrwinston.deadcellsref.di.AppComponent
+import com.mrwinston.deadcellsref.di.DaggerAppComponent
 
 open class MyApplication : Application() {
     val appComponent: AppComponent by lazy {

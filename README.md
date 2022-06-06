@@ -1,6 +1,6 @@
-# Dead Cells Companion
+# Dead Cells Reference
 
-Dead Cells Companion provides information about the items found in the Dead Cells video game. This
+Dead Cells Reference provides information about the items found in the Dead Cells video game. This
 includes where to find the items and their stats.
 
 <a href="https://play.google.com/store/apps/details?id=com.mrwinston.deadcellscompanion"><img src="docs/play_badge.png" alt="Get it on Google Play" width="200"/></a>

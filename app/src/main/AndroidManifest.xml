@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mrwinston.deadcellsref">
+    package="com.mrwinston.deadcellscomp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name="com.mrwinston.deadcellsref.MyApplication"
+        android:name="com.mrwinston.deadcellscomp.MyApplication"
         android:allowBackup="false"
         android:icon="@mipmap/dead_cells_launcher"
         android:label="@string/app_name"
@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.mrwinston.deadcellsref.view.MainActivity"
+            android:name="com.mrwinston.deadcellscomp.view.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             android:exported="true">

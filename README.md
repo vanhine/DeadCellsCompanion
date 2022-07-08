@@ -3,7 +3,7 @@
 Dead Cells Reference provides information about the items found in the Dead Cells video game. This
 includes where to find the items and their stats.
 
-<a href="https://play.google.com/store/apps/details?id=com.mrwinston.deadcellscompanion"><img src="docs/play_badge.png" alt="Get it on Google Play" width="200"/></a>
+<a href="https://play.google.com/store/apps/details?id=deadcellscomp"><img src="docs/play_badge.png" alt="Get it on Google Play" width="200"/></a>
 
 <img src="docs/gear_page.png" alt="Gear Page" width="300"/><img src="docs/info_page.png" alt="Info Page" width="300"/>
 
